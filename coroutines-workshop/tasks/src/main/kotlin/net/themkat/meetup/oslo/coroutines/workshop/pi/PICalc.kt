@@ -8,7 +8,7 @@ fun main(args: Array<String>) = runBlocking {
 
     // naive sequential way
     val seqTime = measureTimeMillis {
-        (startAcc..startAcc + 100).forEach {
+        (startAcc..startAcc + 25).forEach {
             val formattedPi = "%.25f".format(wallisPi(it))
             println("Accuracy: $it, PI value:  $formattedPi")
         }

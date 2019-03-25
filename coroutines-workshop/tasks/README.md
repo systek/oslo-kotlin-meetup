@@ -14,7 +14,7 @@ If you want more, or you got bored of customers, there is another task you could
 
 
 ### Task: Thinking of `WallisPI.kt` as an existing API
-The first (and probably most boring) task you could do is to wrap calls to the wallisPi function into coroutines. In the file `PiCalc.kt` (src/main/kotlin/net/themkat/meetup/oslo/coroutines/workshop/pi) we have a scenario where we would like to start with accuracy parameter 10 000 000 (number of iterations), and calculate the next 100 different accuracy parameters. We print each of the calculations together with their accuracy parameter. Wrap it into coroutines or explore some other idea you may have :)
+The first (and probably most boring) task you could do is to wrap calls to the wallisPi function into coroutines. In the file `PiCalc.kt` (src/main/kotlin/net/themkat/meetup/oslo/coroutines/workshop/pi) we have a scenario where we would like to start with accuracy parameter 10 000 000 (number of iterations), and calculate the next 25 different accuracy parameters. We print each of the calculations together with their accuracy parameter. Wrap it into coroutines or explore some other idea you may have :)
 
 
 ### Fun extra: Wrap the Wallis Pi calculation into coroutines!
