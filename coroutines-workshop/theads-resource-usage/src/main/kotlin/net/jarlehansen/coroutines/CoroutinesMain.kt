@@ -9,7 +9,7 @@ fun main() = runBlocking {
     readLine()
 
     println("Started")
-    repeat((0..ThreadsMain.NUMBER_OF_THREADS).count()) {
+    repeat(ThreadsMain.NUMBER_OF_THREADS) {
         launch {
             delay(1000L)
             print(".")
