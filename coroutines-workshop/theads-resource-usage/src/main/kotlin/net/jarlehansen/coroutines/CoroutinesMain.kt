@@ -9,14 +9,10 @@ fun main() = runBlocking {
     readLine()
 
     println("Started")
-    val jobs = List(ThreadsMain.NUMBER_OF_THREADS) {
+    repeat((0..ThreadsMain.NUMBER_OF_THREADS).count()) {
         launch {
             delay(1000L)
             print(".")
         }
     }
-    jobs.forEach {
-        it.join()
-    }
-    println("\n\nFinished")
 }
