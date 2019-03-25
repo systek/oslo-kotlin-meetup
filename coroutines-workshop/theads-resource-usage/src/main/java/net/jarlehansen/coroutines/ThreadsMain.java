@@ -10,6 +10,7 @@ public class ThreadsMain {
         System.out.println("Push any key to start threads");
         System.in.read();
 
+        System.out.println("Started");
         for (int i = 0; i < NUMBER_OF_THREADS; i++) {
             Runnable runnable = () -> {
                 try {
@@ -21,5 +22,7 @@ public class ThreadsMain {
 
             new Thread(runnable).start();
         }
+
+        System.out.println("\n\nFinished");
     }
 }

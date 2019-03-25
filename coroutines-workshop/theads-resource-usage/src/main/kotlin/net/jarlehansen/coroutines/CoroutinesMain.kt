@@ -8,6 +8,7 @@ fun main() = runBlocking {
     println("Push any key to start coroutines")
     readLine()
 
+    println("Started")
     val jobs = List(ThreadsMain.NUMBER_OF_THREADS) {
         launch {
             delay(1000L)
@@ -17,4 +18,5 @@ fun main() = runBlocking {
     jobs.forEach {
         it.join()
     }
+    println("\n\nFinished")
 }
