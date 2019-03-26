@@ -1,6 +1,5 @@
 package net.themkat.meetup.oslo.coroutines.workshop.customer
 
-import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.channels.Channel
@@ -9,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 import kotlin.system.measureTimeMillis
 
 
-fun main(args: Array<String>) = runBlocking {
+fun main() = runBlocking {
 
     // Sequential solution
     val seqTime = measureTimeMillis {
@@ -25,7 +24,7 @@ fun main(args: Array<String>) = runBlocking {
     // simple coroutine solution using async
     val asyncTime = measureTimeMillis {
         (0..25).map {
-            async(Dispatchers.Default, CoroutineStart.ATOMIC) {
+            async(Dispatchers.Default) {
                 fetchCustomer(it)
             }
         }.map {
