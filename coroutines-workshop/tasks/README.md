@@ -3,11 +3,26 @@ The thing you have all been looking forward to; experimenting with coroutines fo
 
 
 ## Main task: Existing customer fetching API
-Your task is to optimize a (very simple) customer reporting system for an online shop. This online shop saves ids, names and store points for each customer. The reporting system should use the existing API for fetching customers, sort them by the points in descending order, and then simply print them to the console (standard output). A sequential implementation (including time measurement and basic coroutine setup) is given in `CustomerReporter.kt` (src/main/kotlin/net/themkat/meetup/oslo/coroutines/workshop/customer). You can use this as a starting point if you'd like :) 
-
-What is the point you may ask? When working with coroutines, you often have to work with existing APIs that you may not have control over. Coroutines are in these cases used as optimizations where you pack existing API calls into them to execute the tasks asynchronously. Treat `Customer.kt` and `CustomerFetch.kt` as an existing API. 
 
 
+### Scenario
+
+You will optimize the reporting system for customers.
+The reporting system should use the existing API for fetching customers, sort them by the points in descending order,
+and then simply print them to the console (standard output). 
+
+What is the point you may ask? When working with coroutines, you often have to work with existing APIs that you may not have control over.
+Coroutines are in these cases used as optimizations where you pack existing API calls into them to execute the tasks asynchronously. 
+
+
+### Task
+
+* Your task is to optimize a (very simple) customer reporting system for an online shop.
+* This online shop saves ids, names and store points for each customer.
+* Treat `Customer.kt` and `CustomerFetch.kt` as an existing API. 
+
+A sequential implementation (including time measurement and basic coroutine setup) is given in `CustomerReporter.kt` (src/main/kotlin/net/themkat/meetup/oslo/coroutines/workshop/customer).
+You can use this as a starting point if you'd like :) 
 
 ## Extra task: Calculating Pi
 If you want more, or you got bored of customers, there is another task you could try! Think Pi is a peculiar number? So do we! If you are curious on reading more about the formula itself, you could [head over to Wolfram Alpha](http://mathworld.wolfram.com/WallisFormula.html) (not necessary to solve the tasks, but still fun).
