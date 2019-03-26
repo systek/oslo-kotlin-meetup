@@ -1,10 +1,8 @@
 package net.themkat.meetup.oslo.coroutines.workshop.customer
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
+import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import java.util.concurrent.Executors
 import kotlin.system.measureTimeMillis
 
 
@@ -21,10 +19,11 @@ fun main() = runBlocking {
     println("Sequential time in milliseconds: $seqTime ms\n\n")
 
 
+    val threadPoolDispatcher = Executors.newFixedThreadPool(25).asCoroutineDispatcher()
     // simple coroutine solution using async
     val asyncTime = measureTimeMillis {
         (0..25).map {
-            async(Dispatchers.Default) {
+            async(threadPoolDispatcher) {
                 fetchCustomer(it)
             }
         }.map {
